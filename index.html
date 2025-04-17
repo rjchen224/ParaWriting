@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParaWriting - 英语写作润色助手</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>ParaWriting（英语写作润色助手）</h1>
+
+    <div id="apiKeySection">
+        <label for="apiKeyInput">Deepseek API Key:</label>
+        <input type="password" id="apiKeyInput" placeholder="在此输入你的 API Key">
+        <button id="saveApiKeyButton">保存 Key</button>
+        <p class="api-key-status" id="apiKeyStatus">请先输入并保存你的 Deepseek API Key。</p>
+    </div>
+
+    <div class="container">
+        <!-- Box 1: Input Text -->
+        <div class="box">
+            <h2>你的原文</h2>
+            <textarea id="inputText" placeholder="在此粘贴你的英文写作文本..."></textarea>
+            <button id="polishButton">开始润色</button>
+            <p id="statusMessage" class="status-message"></p>
+        </div>
+
+        <!-- Box 2: Grammar Fix Output -->
+        <div class="box">
+            <h2>语法修正版（带标记）</h2>
+            <textarea id="grammarOutput" placeholder="修正语法错误，改动处将用 [] 标记..." readonly></textarea>
+        </div>
+
+        <!-- Box 3: IELTS 7 Output -->
+        <div class="box">
+            <h2>雅思 7 分水平润色</h2>
+            <textarea id="ielts7Output" placeholder="润色至雅思 7 分水平..." readonly></textarea>
+        </div>
+
+        <!-- Box 4: IELTS 9 Output -->
+        <div class="box">
+            <h2>雅思 9 分水平润色</h2>
+            <textarea id="ielts9Output" placeholder="润色至雅思 9 分水平..." readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
